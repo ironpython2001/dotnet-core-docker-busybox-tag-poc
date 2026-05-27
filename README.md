@@ -44,7 +44,10 @@ podman system df
 
 # Verify Nothing Left
 podman images        # should be empty
+
 podman ps -a         # should be empty
+
 podman volume ls     # should be empty
+
 
 
