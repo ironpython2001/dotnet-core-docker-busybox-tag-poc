@@ -12,6 +12,12 @@ Navigate to the csproj directory and run the commands.
 
 will see "Hello, World!" message on console 
 
+***** get inside the docker container 
+podman run -it --rm --entrypoint /bin/sh hello-app
+
+***** to run the binary inside the docker container
+/hello-binary
+
 **** To clean(optional) Clean Everything
 # Stop all running containers
 podman stop -a
@@ -32,6 +38,13 @@ podman network rm -a
 podman pod rm -a
 
 
+#Check Freed Space
+# Before/after disk usage
+podman system df
 
+# Verify Nothing Left
+podman images        # should be empty
+podman ps -a         # should be empty
+podman volume ls     # should be empty
 
 
